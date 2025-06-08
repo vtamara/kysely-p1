@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": false,
+    "allowImportingTsExtensions": true,
+    "baseUrl": ".",
+    "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution":  "esnext",
+    "module": "nodenext",
+    "moduleResolution":  "nodenext",
+    "noImplicitAny": true,
     "paths": {
       "@/*": ["./*"]
     },
-    "target": "esnext",
     "skipLibCheck": true,
-    "strict": true
-  }
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "es2022"
+  },
+  "exclude": ["node_modules"],
+  "include": ["."]
 }

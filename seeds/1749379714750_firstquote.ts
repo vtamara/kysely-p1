@@ -1,5 +1,5 @@
 import { Insertable, Kysely, PostgresDialect, sql } from 'kysely';
-import { DB, Purchasequote } from './db/db.d.ts';
+import type { DB, Purchasequote } from '../db/db.d.ts';
 
 export async function seed(db: Kysely<any>): Promise<void> {
   let nquote:Insertable<Purchasequote> = {

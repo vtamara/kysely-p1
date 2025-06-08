@@ -1,11 +1,14 @@
-import { Insertable, Kysely, PostgresDialect, sql } from 'kysely';
+import { Insertable, Kysely, PostgresDialect, sql, Updateable } from 'kysely';
 import 'dotenv/config'
 
 import defineConfig from './.config/kysely.config.ts'
-import { DB, Purchasequote } from './db/db.d.ts';
+import type { DB, Purchasequote } from './db/db.d.ts';
 
+console.log("defineConfig=", defineConfig)
+
+const { dialect } = defineConfig
 const db = new Kysely<DB>({
-  dialect: defineConfig.dialect
+  dialect: dialect
 })
 
 let nquote:Insertable<Purchasequote> = {
@@ -32,7 +35,7 @@ console.log("Query of all rows=", rows)
 let crows = await sql<number[]>`select count(*) from purchasequote`.execute(db)
 console.log("Count of rows=", crows.rows[0].count)
 
-let uquote:Updatable<Purchasequote> = {
+let uquote:Updateable<Purchasequote> = {
   minimum: 300,
   maximum: 30,
   usdPriceInSle: 24,
