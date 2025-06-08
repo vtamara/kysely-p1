@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution":  "esnext",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "target": "esnext",
+    "skipLibCheck": true,
+    "strict": true
+  }
+}

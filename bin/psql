@@ -1,0 +1,5 @@
+
+#!/bin/sh
+
+. ./.env
+psql -h $DB_HOST -U $DB_USER $DB_NAME

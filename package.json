@@ -1,0 +1,28 @@
+{
+  "name": "kysely-p1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "vtamara",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.1",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "kysely": "^0.28.2",
+    "kysely-postgres-js": "^2.0.0",
+    "pg": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/pg": "^8.15.4",
+    "kysely-codegen": "^0.18.5",
+    "kysely-ctl": "^0.13.1",
+    "typescript": "^5.8.3"
+  },
+  "type": "module"
+}
