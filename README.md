@@ -1,11 +1,7 @@
 # Example of using kysely
 
 
-1. Create a PostgreSQL user for example in adJ/OpenBSD:
-    ```sh
-    createdb -Ukysely -h /var/www/var/run/postgresql kyselyp1
-    ```
-    At this point you can create a user for PostgreSQL (e.g `kysely`)
+1. Create a user for PostgreSQL (e.g `kysely`) --the following instructions are for adJ/OpenBSD
     ```sh
     % doas su - _postgresql
     % createuser kysely -s -h /var/www/var/run/postgresql/ -U postgres
@@ -14,7 +10,7 @@
     # \q
     % exit 
     ```
-2. Simplify interaction with the database by configuring the new user and password in `~/.pgpass` with:
+2. Simplify interaction with the database by configuring the new user and password in your `~/.pgpass` with:
     ```sh
     % echo "*:*:*:kysely:MiClave" >> ~/.pgpass
     ```
